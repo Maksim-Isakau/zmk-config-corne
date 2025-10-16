@@ -48,6 +48,7 @@
                                &kp LCTRL &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp CMMA &kp DOT &kp SLASH &kp RBKT
                                        &kp ENTER &mo LA_NUM &mo LA_NAV   &mo LA_SYM &kp SPC &none
             >;
+            sensor-bindings = <&inc_dec_kp LC(LS(LEFT)) LC(LS(RIGHT)) &inc_dec_kp LC(LS(LEFT)) LC(LS(RIGHT))>;
         };
 
        numerical_layer {
@@ -58,6 +59,7 @@
              &trans &kp ENTER &kp STAR &kp LC(INS) &kp LS(INS) &kp SPC   &kp CARET &kp AMPS &kp CMMA &kp DOT &kp SLASH &trans
                                                   &trans &trans &trans   &mo LA_FUN &trans &trans
             >;
+            sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp PG_UP PG_DN>;
         };
 
         symbols_layer {
@@ -68,6 +70,7 @@
                &trans &kp GT &kp PAUSE_BREAK &kp LBKT &kp RBKT &kp DQT   &kp LEFT &kp RIGHT &kp ENTER &m_dptr &kp DOWN &trans
                                                   &mo LA_FUN &kp ENTER   &trans &trans &trans
             >;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         navigation_layer {
@@ -78,6 +81,7 @@
           &trans &kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) &kp LC(LS(S))   &kp SQT &kp PIPE2  &kp TILDE &m_ptr &kp BSLH &trans
                                                   &trans &trans &trans   &kp ENTER &trans &trans
             >;
+            sensor-bindings = <&inc_dec_kp LA(TAB) LA(LS(TAB)) &inc_dec_kp LA(TAB) LA(LS(TAB))>;
         };
 
         functional_layer {
@@ -88,6 +92,7 @@
                               &trans &none &none &none &none &bt BT_CLR   &kp F11 &kp F12 &none &none &none &trans
                                                    &trans &trans &trans   &trans &trans &trans
             >;
+            sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN &inc_dec_kp C_BRI_UP C_BRI_DN>;
         };
 
         gaming1_layer {
@@ -98,6 +103,7 @@
                                   &trans &kp Z &kp X &kp C &kp V &kp B   &none &none &none &none &none &trans
                                             &trans &kp LALT &mo LA_GM2   &none &none &trans
             >;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         gaming2_layer {
@@ -108,6 +114,7 @@
                         &trans &kp N &kp M  &kp CMMA &kp DOT &kp SLASH   &none &none &none &none &none &trans
                                                   &trans &kp TAB &none   &none &none &trans
             >;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
     };
 };
