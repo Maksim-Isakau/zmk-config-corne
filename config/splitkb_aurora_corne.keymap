@@ -76,7 +76,7 @@
                     &trans &kp ESC &kp TAB &kp DEL &kp BSPC &caps_word   &kp PG_UP &kp HOME &kp UP &kp END &kp EQUAL &trans
               &trans &kp LCTRL &kp LGUI &kp LALT &kp LSHFT &kp LG(SPC)   &kp PG_DN &kp LEFT &kp DOWN &kp RIGHT &kp MINUS &trans
           &trans &kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) &kp LC(LS(S))   &kp SQT &kp PIPE2  &kp TILDE &m_ptr &kp BSLH &trans
-                                                         &trans &trans   &kp ENTER &trans &trans
+                                                  &trans &trans &trans   &kp ENTER &trans &trans
             >;
         };
 
