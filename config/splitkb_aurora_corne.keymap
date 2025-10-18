@@ -11,10 +11,9 @@
 #define LA_DEF 0
 #define LA_NUM 1
 #define LA_SYM 2
-#define LA_NAV 3
-#define LA_FUN 4
-#define LA_GM1 5
-#define LA_GM2 6
+#define LA_NA1 3
+#define LA_NA2 4
+#define LA_FUN 5
 
 / { 
     macros {
@@ -46,7 +45,7 @@
                                  &kp ESC &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I &kp O &kp P &kp LBKT
                                  &kp TAB &kp A &kp S &kp D &kp F &kp G   &kp H &kp J &kp K &kp L &kp SEMI &kp SQT
                                &kp LCTRL &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp CMMA &kp DOT &kp SLASH &kp RBKT
-                                       &kp ENTER &mo LA_NUM &mo LA_NAV   &mo LA_SYM &kp SPC &none
+                                      &mo LA_NA2 &mo LA_NUM &mo LA_NA1   &mo LA_SYM &kp SPC &kp ENTER
             >;
             sensor-bindings = <&inc_dec_kp LC(LS(LEFT)) LC(LS(RIGHT)) &inc_dec_kp LC(LS(LEFT)) LC(LS(RIGHT))>;
         };
@@ -65,16 +64,16 @@
         symbols_layer {
 			label = "sym";
             bindings = <
-         &trans &kp LC(LS(ESC)) &kp PLUS &kp LBRC &kp RBRC &kp LS(F10)   &kp LC(LS(F)) &kp C_VOL_UP  &kp C_VOL_DN &tog LA_GM1 &kp UP &trans
+         &trans &kp LC(LS(ESC)) &kp PLUS &kp LBRC &kp RBRC &kp LS(F10)   &kp LC(LS(F)) &kp C_VOL_UP  &kp C_VOL_DN &none &kp UP &trans
                    &trans &kp LT &kp UNDER &kp LPAR &kp RPAR &kp GRAVE   &kp RALT &kp LSHFT &kp LALT &kp LGUI &kp LCTRL &trans
                &trans &kp GT &kp PAUSE_BREAK &kp LBKT &kp RBKT &kp DQT   &kp LEFT &kp RIGHT &kp ENTER &m_dptr &kp DOWN &trans
-                                                  &mo LA_FUN &kp ENTER   &trans &trans &trans
+                                           &trans &mo LA_FUN &kp ENTER   &trans &trans &trans
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
-        navigation_layer {
-			label = "nav";
+        navigation_layer_1 {
+			label = "na1";
             bindings = <
                     &trans &kp ESC &kp TAB &kp DEL &kp BSPC &caps_word   &kp PG_UP &kp HOME &kp UP &kp END &kp EQUAL &trans
               &trans &kp LCTRL &kp LGUI &kp LALT &kp LSHFT &kp LG(SPC)   &kp PG_DN &kp LEFT &kp DOWN &kp RIGHT &kp MINUS &trans
@@ -84,37 +83,26 @@
             sensor-bindings = <&inc_dec_kp LA(TAB) LA(LS(TAB)) &inc_dec_kp LA(TAB) LA(LS(TAB))>;
         };
 
+        navigation_layer_2 {
+			label = "na2";
+            bindings = <
+                  &none &kp C_VOL_UP &kp HOME &kp UP &kp END &kp PG_UP   &none &none &none &none &none &none
+            &none &kp C_VOL_DOWN &kp RIGHT &kp DOWN &kp LEFT &kp PG_DN   &none &none &none &none &none &none
+                             &none &none &none &kp SPC &kp ENTER &none   &none &none &none &none &none &none
+                                                    &trans &none &none   &none &none &none
+            >;
+            sensor-bindings = <&inc_dec_kp LA(TAB) LA(LS(TAB)) &inc_dec_kp LA(TAB) LA(LS(TAB))>;
+        };
+
         functional_layer {
 			label = "func";
             bindings = <
-&trans &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &trans
+                              &trans &trans &trans &trans &trans &trans   &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &trans
                      &trans &kp LCTRL &kp LGUI &kp LALT &kp LSHFT &none   &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &trans
-                              &trans &none &none &none &none &bt BT_CLR   &kp F11 &kp F12 &none &none &none &trans
+                                 &trans &none &none &none &none &kp SPC   &kp F11 &kp F12 &none &none &none &trans
                                                    &trans &trans &trans   &trans &trans &trans
             >;
             sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN &inc_dec_kp C_BRI_UP C_BRI_DN>;
-        };
-
-        gaming1_layer {
-			label = "gm1";
-            bindings = <
-                                  &trans &kp Q &kp W &kp E &kp R &kp T   &none &none &none &tog LA_GM1 &none &trans
-                                  &trans &kp A &kp S &kp D &kp F &kp G   &none &none &none &none &none &trans
-                                  &trans &kp Z &kp X &kp C &kp V &kp B   &none &none &none &none &none &trans
-                                            &trans &kp LALT &mo LA_GM2   &none &none &trans
-            >;
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
-        };
-
-        gaming2_layer {
-			label = "gm2";
-            bindings = <
-                                &trans &kp ESC &kp U &kp I &kp O &kp P   &none &none &none &none &none &trans
-                    &trans &kp LCTRL &kp J &kp LALT &kp LSHFT &kp SEMI   &none &none &none &none &none &trans
-                        &trans &kp N &kp M  &kp CMMA &kp DOT &kp SLASH   &none &none &none &none &none &trans
-                                                  &trans &kp TAB &none   &none &none &trans
-            >;
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
     };
 };
