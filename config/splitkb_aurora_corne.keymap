@@ -47,7 +47,6 @@
                                &kp LCTRL &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp CMMA &kp DOT &kp SLASH &kp RBKT
                                       &mo LA_NA2 &mo LA_NUM &mo LA_NA1   &mo LA_SYM &kp SPC &kp ENTER
             >;
-            sensor-bindings = <&inc_dec_kp LC(LS(LEFT)) LC(LS(RIGHT)) &inc_dec_kp LC(LS(LEFT)) LC(LS(RIGHT))>;
         };
 
        numerical_layer {
@@ -58,7 +57,6 @@
              &trans &kp ENTER &kp STAR &kp LC(INS) &kp LS(INS) &kp SPC   &kp CARET &kp AMPS &kp CMMA &kp DOT &kp SLASH &trans
                                                   &trans &trans &trans   &mo LA_FUN &trans &trans
             >;
-            sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp PG_UP PG_DN>;
         };
 
         symbols_layer {
@@ -69,7 +67,6 @@
                &trans &kp GT &kp PAUSE_BREAK &kp LBKT &kp RBKT &kp DQT   &kp LEFT &kp RIGHT &kp ENTER &m_dptr &kp DOWN &trans
                                            &trans &mo LA_FUN &kp ENTER   &trans &trans &trans
             >;
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         navigation_layer_1 {
@@ -80,7 +77,6 @@
           &trans &kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) &kp LC(LS(S))   &kp SQT &kp PIPE2  &kp TILDE &m_ptr &kp BSLH &trans
                                                   &trans &trans &trans   &kp ENTER &trans &trans
             >;
-            sensor-bindings = <&inc_dec_kp LA(TAB) LA(LS(TAB)) &inc_dec_kp LA(TAB) LA(LS(TAB))>;
         };
 
         navigation_layer_2 {
@@ -91,7 +87,6 @@
                              &none &none &none &kp SPC &kp ENTER &none   &none &none &none &none &none &none
                                                     &trans &none &none   &none &none &none
             >;
-            sensor-bindings = <&inc_dec_kp LA(TAB) LA(LS(TAB)) &inc_dec_kp LA(TAB) LA(LS(TAB))>;
         };
 
         functional_layer {
@@ -102,7 +97,6 @@
                                  &trans &none &none &none &none &kp SPC   &kp F11 &kp F12 &none &none &none &trans
                                                    &trans &trans &trans   &trans &trans &trans
             >;
-            sensor-bindings = <&inc_dec_kp C_BRI_UP C_BRI_DN &inc_dec_kp C_BRI_UP C_BRI_DN>;
         };
     };
 };
