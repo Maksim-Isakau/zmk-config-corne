@@ -94,7 +94,7 @@
             bindings = <
                               &trans &trans &trans &trans &trans &trans   &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &trans
                      &trans &kp LCTRL &kp LGUI &kp LALT &kp LSHFT &none   &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &trans
-                                 &trans &none &none &none &none &kp SPC   &kp F11 &kp F12 &none &none &none &trans
+                         &none &studio_unlock &none &none &none &kp SPC   &kp F11 &kp F12 &none &none &none &trans
                                                    &trans &trans &trans   &trans &trans &trans
             >;
         };
