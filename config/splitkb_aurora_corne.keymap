@@ -94,7 +94,7 @@
             bindings = <
                     &trans &kp ESC &kp TAB &kp DEL &kp BSPC &caps_word   &kp PG_UP &kp HOME &kp UP &kp END &kp EQUAL &trans
               &trans &kp LCTRL &kp LGUI &kp LALT &kp LSHFT &kp LG(SPC)   &kp PG_DN &kp LEFT &kp DOWN &kp RIGHT &kp MINUS &trans
-                              &trans &none &none &none &none &m_cblk   &kp SQT &kp PIPE2  &kp TILDE &m_ptr &kp BSLH &trans
+                 &none &kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) &m_cblk   &kp SQT &kp PIPE2  &kp TILDE &m_ptr &kp BSLH &trans
                                                   &trans &trans &trans   &kp ENTER &trans &trans
             >;
         };
@@ -102,20 +102,20 @@
         mod_left {
 			label = "modl";
             bindings = <
-                &none &none &none &none &none &none   &kp LC(Y) &kp LC(U) &kp LC(I) &kp LC(O) &kp LC(P) &none
-                &trans &none &kp LGUI &kp LALT &kp LSHFT &none   &kp LC(H) &kp LC(J) &kp LC(K) &kp LC(L) &kp LC(SEMI) &none
-                &none &none &none &none &none &none   &kp LC(N) &kp LC(M) &kp LC(CMMA) &kp LC(DOT) &kp LC(SLASH) &none
-                                     &trans &none &none   &none &none &none
+                &none &kp LC(Q) &kp LC(W) &kp LC(E) &kp LC(R) &kp LC(T)   &kp LC(Y) &kp LC(U) &kp LC(I) &kp LC(O) &kp LC(P) &none
+                &none &kp LC(A) &kp LC(S) &kp LC(D) &kp LC(F) &kp LC(G)   &kp LC(H) &kp LC(J) &kp LC(K) &kp LC(L) &kp LC(SEMI) &none
+                &none &kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) &kp LC(B)   &kp LC(N) &kp LC(M) &kp LC(CMMA) &kp LC(DOT) &kp LC(SLASH) &none
+                                               &trans &kp LALT &kp LSFT   &kp LSFT &kp LALT &kp LGUI
             >;
         };
 
         mod_right {
 			label = "modr";
             bindings = <
-                &none &kp LC(Q) &kp LC(W) &kp LC(E) &kp LC(R) &kp LC(T)   &none &none &none &none &none &none
-                &none &kp LC(A) &kp LC(S) &kp LC(D) &kp LC(F) &kp LC(G)   &none &kp LSHFT &kp LALT &kp LGUI &none &none
-                &none &kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) &kp LC(B)   &none &none &none &none &none &none
-                                     &none &none &none   &none &none &trans
+                &none &kp LC(Q) &kp LC(W) &kp LC(E) &kp LC(R) &kp LC(T)   &kp LC(Y) &kp LC(U) &kp LC(I) &kp LC(O) &kp LC(P) &none
+                &none &kp LC(A) &kp LC(S) &kp LC(D) &kp LC(F) &kp LC(G)   &kp LC(H) &kp LC(J) &kp LC(K) &kp LC(L) &kp LC(SEMI) &none
+                &none &kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) &kp LC(B)   &kp LC(N) &kp LC(M) &kp LC(CMMA) &kp LC(DOT) &kp LC(SLASH) &none
+                                             &kp LGUI &kp LALT &kp LSFT   &kp LSFT &kp LALT &trans
             >;
         };
 
