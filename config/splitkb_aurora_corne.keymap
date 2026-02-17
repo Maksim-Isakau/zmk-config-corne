@@ -12,8 +12,9 @@
 #define LA_NUM 1
 #define LA_SYM 2
 #define LA_NA1 3
-#define LA_NA2 4
-#define LA_FUN 5
+#define LA_ML 4
+#define LA_MR 5
+#define LA_FUN 6
 
 / {
     combos {
@@ -44,6 +45,15 @@
             tap-ms = <0>;
 	        bindings = <&macro_tap &kp EQUAL &kp GT>;
 	    };
+
+	    m_cblk: m_cblk {
+	        label = "```";
+	        compatible = "zmk,behavior-macro";
+	        #binding-cells = <0>;
+	        wait-ms = <0>;
+	        tap-ms = <0>;
+	        bindings = <&macro_tap &kp GRAVE &kp GRAVE &kp GRAVE &kp LS(ENTER) &kp GRAVE &kp GRAVE &kp GRAVE &kp UP &kp LS(ENTER)>;
+	    };
 	};
 
     keymap {
@@ -52,10 +62,10 @@
        	default_layer {
 			label = "base";
             bindings = <
-                                 &kp ESC &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I &kp O &kp P &kp LBKT
-                                 &kp TAB &kp A &kp S &kp D &kp F &kp G   &kp H &kp J &kp K &kp L &kp SEMI &kp SQT
+                                &kp none &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I &kp O &kp P &kp LBKT
+                                &kp none &kp A &kp S &kp D &kp F &kp G   &kp H &kp J &kp K &kp L &kp SEMI &kp SQT
                                &kp LCTRL &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp CMMA &kp DOT &kp SLASH &kp RBKT
-                                      &mo LA_NA2 &mo LA_NUM &mo LA_NA1   &mo LA_SYM &kp SPC &kp ENTER
+                                   &lt LA_ML ESC &mo LA_NUM &mo LA_NA1   &mo LA_SYM &kp SPC &lt LA_MR TAB
             >;
         };
 
@@ -84,18 +94,28 @@
             bindings = <
                     &trans &kp ESC &kp TAB &kp DEL &kp BSPC &caps_word   &kp PG_UP &kp HOME &kp UP &kp END &kp EQUAL &trans
               &trans &kp LCTRL &kp LGUI &kp LALT &kp LSHFT &kp LG(SPC)   &kp PG_DN &kp LEFT &kp DOWN &kp RIGHT &kp MINUS &trans
-          &trans &kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) &kp LC(LS(S))   &kp SQT &kp PIPE2  &kp TILDE &m_ptr &kp BSLH &trans
+                              &trans &none &none &none &none &m_cblk   &kp SQT &kp PIPE2  &kp TILDE &m_ptr &kp BSLH &trans
                                                   &trans &trans &trans   &kp ENTER &trans &trans
             >;
         };
 
-        navigation_layer_2 {
-			label = "na2";
+        mod_left {
+			label = "modl";
             bindings = <
-                  &none &kp C_VOL_UP &kp HOME &kp UP &kp END &kp PG_UP   &none &none &none &none &none &none
-            &none &kp C_VOL_DN &kp RIGHT &kp DOWN &kp LEFT &kp PG_DN   &none &none &none &none &none &none
-                             &none &none &none &kp SPC &kp ENTER &none   &none &none &none &none &none &none
-                                                    &trans &none &none   &none &none &none
+                &none &none &none &none &none &none   &kp LC(Y) &kp LC(U) &kp LC(I) &kp LC(O) &kp LC(P) &none
+                &trans &none &kp LGUI &kp LALT &kp LSHFT &none   &kp LC(H) &kp LC(J) &kp LC(K) &kp LC(L) &kp LC(SEMI) &none
+                &none &none &none &none &none &none   &kp LC(N) &kp LC(M) &kp LC(CMMA) &kp LC(DOT) &kp LC(SLASH) &none
+                                     &trans &none &none   &none &none &none
+            >;
+        };
+
+        mod_right {
+			label = "modr";
+            bindings = <
+                &none &kp LC(Q) &kp LC(W) &kp LC(E) &kp LC(R) &kp LC(T)   &none &none &none &none &none &none
+                &none &kp LC(A) &kp LC(S) &kp LC(D) &kp LC(F) &kp LC(G)   &none &kp LSHFT &kp LALT &kp LGUI &none &none
+                &none &kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) &kp LC(B)   &none &none &none &none &none &none
+                                     &none &none &none   &none &none &trans
             >;
         };
 
