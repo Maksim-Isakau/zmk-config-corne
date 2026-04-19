@@ -54,7 +54,7 @@
 			label = "base";
             bindings = <
                                  &kp ESC &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I &kp O &kp P &kp TAB
-                                   &none &kp A &kp S &kp D &kp F &kp G   &kp H &kp J &kp K &kp L &kp SEMI &none
+                                   &none &kp A &kp S &kp D &kp F &kp G   &kp H &kp J &kp K &kp L &kp SEMI &kp ENTER
                                    &none &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp CMMA &kp DOT &kp SLASH &none
                                        &kp LSHFT &mo LA_NUM &mo LA_NA1   &mo LA_SYM &kp SPC &kp LCTRL
             >;
