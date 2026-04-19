@@ -52,7 +52,7 @@
 			label = "base";
             bindings = <
                                  &kp ESC &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I &kp O &kp P &kp TAB
-                               &kp GRAVE &kp A &kp S &kp D &kp F &kp G   &kp H &kp J &kp K &kp L &kp SEMI &kp ENTER
+                                 &kp DQT &kp A &kp S &kp D &kp F &kp G   &kp H &kp J &kp K &kp L &kp SEMI &kp ENTER
                                 &kp LALT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp CMMA &kp DOT &kp SLASH &kp LALT
                                        &kp LSHFT &mo LA_NUM &mo LA_NA1   &mo LA_SYM &kp SPC &kp LCTRL
             >;
@@ -72,19 +72,19 @@
 			label = "sym";
             bindings = <
          &trans &kp LC(LS(ESC)) &kp PLUS &kp LBRC &kp RBRC &kp LS(F10)   &kp LC(LS(F)) &kp C_VOL_UP  &kp C_VOL_DN &none &kp UP &trans
-                    &trans &kp LT &kp UNDER &kp LPAR &kp RPAR &kp none   &kp RALT &kp LSHFT &kp LALT &kp LGUI &kp LCTRL &trans
+                   &trans &kp LT &kp UNDER &kp LPAR &kp RPAR &kp GRAVE   &kp RALT &kp LSHFT &kp LALT &kp LGUI &kp LCTRL &trans
                &trans &kp GT &kp PAUSE_BREAK &kp LBKT &kp RBKT &kp DQT   &kp LEFT &kp RIGHT &kp ENTER &m_dptr &kp DOWN &trans
-                                            &trans &mo LA_FUN &kp none   &trans &trans &trans
+                                               &trans &mo LA_FUN &none   &trans &trans &trans
             >;
         };
 
         navigation_layer_1 {
 			label = "na1";
             bindings = <
-                  &trans &kp none &kp none &kp DEL &kp BSPC &caps_word   &kp PG_UP &kp HOME &kp UP &kp END &kp EQUAL &trans
+                      &trans &none &none &kp DEL &kp BSPC &caps_word   &kp PG_UP &kp HOME &kp UP &kp END &kp EQUAL &trans
               &trans &kp LCTRL &kp LGUI &kp LALT &kp LSHFT &kp LG(SPC)   &kp PG_DN &kp LEFT &kp DOWN &kp RIGHT &kp MINUS &trans
           &trans &kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(V) &kp LC(LS(S))   &kp SQT &kp PIPE2  &kp TILDE &m_ptr &kp BSLH &trans
-                                                  &trans &trans &trans   &kp none &trans &trans
+                                                  &trans &trans &trans   &none &trans &trans
             >;
         };
 
